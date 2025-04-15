@@ -1,0 +1,15 @@
+apiVersion: enterprise.gloo.solo.io/v1
+kind: AuthConfig
+metadata:
+  name: basic-auth
+  namespace: ingress-gw
+spec:
+  configs:
+    - basicAuth:
+        apr:
+          users:
+            # BASIC_AUTH_HEADER=$(echo -n "user:password" | base64)
+            user:
+              hashedPassword: 14o4fMw/Pm2L34SvyyA2r.
+              salt: 0adzfifo
+        realm: gloo

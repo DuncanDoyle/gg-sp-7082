@@ -44,9 +44,9 @@ gloo:
         podMonitorEnabled: "true"
   discovery:
     enabled: false
-  rbac:
-    namespaced: true
-    nameSuffix: gg-demo
+  # rbac:
+  #   namespaced: true
+  #   nameSuffix: gg-demo
   settings:
     # Expose the Control Plane Admin API (port 10010 on Gloo)
     devMode: true

@@ -1,10 +1,19 @@
 apiVersion: gateway.solo.io/v1
 kind: RouteOption
 metadata:
-  name: cors
+  name: routeoption
   namespace: ingress-gw
 spec:
+  targetRefs:
+  - group: gateway.networking.k8s.io
+    kind: HTTPRoute
+    name: api-example-com
   options:
+    extauth:
+      configRef:
+        # references the AuthConfig we defined in oauth-oidc-atv-authconfig.yaml
+        name: basic-auth
+        namespace: ingress-gw
     cors:
       allowOrigin:
         - "*"

@@ -27,8 +27,9 @@ printf "\nDeploy Reference Grants ...\n"
 kubectl apply -f referencegrants/httpbin-ns/ingress-gw-ns-httproute-service-rg.yaml
 
 # Deploy RouteOptions
-printg "\nDeploy RouteOptions ...\n"
-kubectl apply -f policies/cors-routeoption.yaml
+printf "\nDeploy RouteOptions ...\n"
+kubectl apply -f policies/authconfig/basic-auth-authconfig.yaml
+kubectl apply -f policies/routeoption.yaml
 
 # # HTTPRoute
 # printf "\nDeploy HTTPRoute ...\n"

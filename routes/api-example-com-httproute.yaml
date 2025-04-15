@@ -18,12 +18,12 @@ spec:
       - path:
           type: PathPrefix
           value: /
-      filters:
-      - type: ExtensionRef
-        extensionRef:
-          group: gateway.solo.io
-          kind: RouteOption
-          name: cors
+      # filters:
+      # - type: ExtensionRef
+      #   extensionRef:
+      #     group: gateway.solo.io
+      #     kind: RouteOption
+      #     name: routeoption
       backendRefs:
       - name: httpbin
         namespace: httpbin
